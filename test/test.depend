@@ -1,0 +1,159 @@
+# depslib dependency file v1.0
+1679326170 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\menu.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"stb-master/stb_easy_font.h"
+	"menu.h"
+
+1674029754 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\stb-master\stb_easy_font.h
+	<stdlib.h>
+	<math.h>
+
+1679326306 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\menu.h
+
+1681743816 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\main.c
+	<windows.h>
+	<gl/gl.h>
+	"src/button.h"
+	"src/texture.h"
+	"src/menu.h"
+
+1681743116 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\menu.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"control.h"
+	"button.h"
+
+1679416382 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\menu.h
+
+1679326782 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\texture.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"../stb-master/stb_image.h"
+	"texture.h"
+
+1674029754 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\stb-master\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1679301646 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\texture.h
+
+1679331206 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\control.h
+
+1679331330 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\control.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"control.h"
+	"menu.h"
+
+1679332468 source:d:\учеба\4 семестр\Компьютерная графика\2 лб\test\main.c
+	<windows.h>
+	<gl/gl.h>
+	"src/menu.h"
+	"src/texture.h"
+	"src/control.h"
+
+1679328914 d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\menu.h
+
+1679301646 d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\texture.h
+
+1679331206 d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\control.h
+
+1679373214 source:d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\control.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"control.h"
+	"menu.h"
+
+1679329052 source:d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\menu.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"../stb-master/stb_easy_font.h"
+	"menu.h"
+
+1674029754 d:\учеба\4 семестр\Компьютерная графика\2 лб\test\stb-master\stb_easy_font.h
+	<stdlib.h>
+	<math.h>
+
+1679326782 source:d:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\texture.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"../stb-master/stb_image.h"
+	"texture.h"
+
+1674029754 d:\учеба\4 семестр\Компьютерная графика\2 лб\test\stb-master\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1679416458 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\button.h
+
+1681743652 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\button.c
+	<gl/gl.h>
+	<stdio.h>
+	<stdlib.h>
+	"../stb-master/stb_easy_font.h"
+	"button.h"
+
+1679416524 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\move.c
+	"move.h"
+
+1679375492 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\move.h
+
+1679418922 f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\shader.h
+
+1679419625 source:e:\codeblocks\_glad\src\glad.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<glad/glad.h>
+	<windows.h>
+	<winapifamily.h>
+	<dlfcn.h>
+
+1679419625 e:\codeblocks\_glad\include\glad\glad.h
+	<KHR/khrplatform.h>
+
+1679419625 e:\codeblocks\_glad\include\khr\khrplatform.h
+	<stdint.h>
+	<inttypes.h>
+	<stdint.h>
+
+1679420854 source:f:\учеба\4 семестр\Компьютерная графика\2 лб\test\src\shader.c
+	<stdlib.h>
+	<string.h>
+	<gl/gl.h>
+	"shader.h"
+

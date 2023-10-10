@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1683780560 source:f:\учеба\4 семестр\Компьютерная графика\test3d\main.c
+	<windows.h>
+	<gl/gl.h>
+	<math.h>
+
+1683027248 source:d:\учеба\4 семестр\Компьютерная графика\test3d\main.c
+	<windows.h>
+	<gl/gl.h>
+	<math.h>
+
