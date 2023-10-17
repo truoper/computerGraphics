@@ -14,7 +14,7 @@ void ShowWord()
 {
     glEnableClientState(GL_VERTEX_ARRAY);
         glVertexPointer(3, GL_FLOAT, 0, &vert);
-        /*3 задание отрисовка шахматной доски*/
+        /*3 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ*/
         for (int i = -n; i < n; i++)
         {
             for (int j = -n; j < n; j++)
@@ -31,18 +31,18 @@ void ShowWord()
         glColor3f(1,0,0);
         glDrawArrays(GL_TRIANGLE_FAN, 0, 6);
 
-        /*Линии 1 задание*/
+        /*пїЅпїЅпїЅпїЅпїЅ 1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
         glLineWidth(5);
         glBegin(GL_LINES);
-            /*Линия 1*/
+            /*пїЅпїЅпїЅпїЅпїЅ 1*/
             glColor3f(1,0,0);
             glVertex3f(0, 0, 1);
             glVertex3f(0, 1, 1);
-            /*Линия 2*/
+            /*пїЅпїЅпїЅпїЅпїЅ 2*/
             glColor3f(0,1,0);
             glVertex3f(0, 0, 1);
             glVertex3f(1, 0, 1);
-            /*Линия 3*/
+            /*пїЅпїЅпїЅпїЅпїЅ 3*/
             glColor3f(0,0,1);
             glVertex3f(0, 0, 1);
             glVertex3f(0, 0, 2);
@@ -76,7 +76,7 @@ void MoveCamera()
 }
 
 float vertex[] = {-1,-1,1, 1,-1,1, 1,1,1, -1,1,1};
-float normal[] = {-1,-1,1, 1,-1,1, 1,1,1, -1,1,1};/*векторы нормали*/
+float normal[] = {-1,-1,1, 1,-1,1, 1,1,1, -1,1,1};/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 void DrawQuad()
 {
@@ -103,8 +103,8 @@ void Draw(int n, int type, float *vertieces, float *normals)
 void DrawCube()
 {
     glPushMatrix();
-        glScalef(1, 1, 1);/*размер куба*/
-        glTranslatef(6, -4, 1);/*положение куба*/
+        glScalef(1, 1, 1);/*пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ*/
+        glTranslatef(6, -4, 1);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ*/
         DrawQuad();
         glRotatef(90, 1,0,0);
         DrawQuad();
@@ -121,9 +121,9 @@ void DrawCube()
 
 void Init()
 {
-    glEnable(GL_BLEND);/*разрешение смешивания цветов*/
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);/*настройка смешивания цветов для каждой точки*/
-    /*как будет братся цвет из источника, как будет братся цвет из приемника */
+    glEnable(GL_BLEND);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ*/
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ*/
+    /*пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
     glEnable(GL_ALPHA_TEST);
     glAlphaFunc(GL_GREATER, 0);
@@ -132,25 +132,77 @@ void Init()
 void DrawPrism(const int n)
 {
     const float pi = acos(-1);
-    const int vn = 2*n; // количество вершин
+    const int vn = 2 * n + 1; // 2 СЃРµС‡РµРЅРёСЏ + 1 СЃСЂРµРґРЅСЏСЏ С‚РѕС‡РєР°
 
-    float vertieces[3*vn]; // Это же и нормали.
+    float vertices[3 * vn]; // Р­С‚Рѕ РІРµСЂС€РёРЅС‹ РїСЂРёР·РјС‹
 
-    for (int i = 0; i < n; i++) {
-        float phi = 2 * pi * (float)i / (float)n;
+    for (int i = 0; i < vn; i++) {
+        float phi = 2 * pi * (float) i / (float) (vn - 1); // РЎСЂРµРґРЅРµРµ РЅРµ СЂР°РІРЅРѕ
         float c = cos(phi);
         float s = sin(phi);
 
-        // Вершина в верхнем основании
-        vertieces[6*i + 0] = c;
-        vertieces[6*i + 1] = s;
-        vertieces[6*i + 2] = 1.0;
+        // Р’РµСЂС€РёРЅС‹ РІ РІРµСЂС…РЅРµРј СЃРµС‡РµРЅРёРё
+        vertices[3 * i] = 0.5 * c; // РњРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ СЂР°РґРёСѓСЃ РІРµСЂС…РЅРµРіРѕ СЃРµС‡РµРЅРёСЏ
+        vertices[3 * i + 1] = 0.5 * s; // РњРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ СЂР°РґРёСѓСЃ РІРµСЂС…РЅРµРіРѕ СЃРµС‡РµРЅРёСЏ
+        vertices[3 * i + 2] = 1.0;
 
-        // Вершина в нижнем основании
-        vertieces[6*i + 3] = c;
-        vertieces[6*i + 4] = s;
-        vertieces[6*i + 5] = -1.0;
+        // Р’РµСЂС€РёРЅС‹ РІ РЅРёР¶РЅРµРј СЃРµС‡РµРЅРёРё
+        vertices[3 * (i + vn)] = c; // РњРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ СЂР°РґРёСѓСЃ РЅРёР¶РЅРµРіРѕ СЃРµС‡РµРЅРёСЏ
+        vertices[3 * (i + vn) + 1] = s; // РњРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ СЂР°РґРёСѓСЃ РЅРёР¶РЅРµРіРѕ СЃРµС‡РµРЅРёСЏ
+        vertices[3 * (i + vn) + 2] = -1.0;
     }
+
+    glPushMatrix();
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glNormalPointer(GL_FLOAT, 0, vertices);
+
+    // Р’РµСЂС…РЅРµРµ СЃРµС‡РµРЅРёРµ
+    glDrawArrays(GL_POLYGON, 0, vn);
+
+    // РќРёР¶РЅРµРµ СЃРµС‡РµРЅРёРµ
+    glDrawArrays(GL_POLYGON, vn, vn);
+
+    // РЎРѕРµРґРёРЅСЏСЋС‰РёРµ СЃС‚РѕСЂРѕРЅС‹
+    for (int i = 0; i < vn; i++) {
+        glDrawArrays(GL_QUADS, i, 4);
+    }
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+
+    glPopMatrix();
+}
+
+
+    glPushMatrix();
+
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
+
+    glVertexPointer(3, GL_FLOAT, 0, vertices);
+    glNormalPointer(GL_FLOAT, 0, vertices);
+
+    // Р’РµСЂС…РЅРµРµ СЃРµС‡РµРЅРёРµ
+    glDrawArrays(GL_POLYGON, 0, vn);
+
+    // РќРёР¶РЅРµРµ СЃРµС‡РµРЅРёРµ
+    glDrawArrays(GL_POLYGON, vn, vn);
+
+    // РЎРѕРµРґРёРЅСЏСЋС‰РёРµ СЃС‚РѕСЂРѕРЅС‹
+    for (int i = 0; i < vn; i++) {
+        glDrawArrays(GL_QUADS, i, 4);
+    }
+
+    glDisableClientState(GL_VERTEX_ARRAY);
+    glDisableClientState(GL_NORMAL_ARRAY);
+
+    glPopMatrix();
+}
+
 
     glPushMatrix();
 
@@ -160,26 +212,34 @@ void DrawPrism(const int n)
     glVertexPointer(3, GL_FLOAT, 0, vertieces);
     glNormalPointer(GL_FLOAT, 0, vertieces);
 
-    // Боковые стороны
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     GLuint side_index[4];
     for (int i = 0; i < n; i++) {
         for (int k = 0; k < 4; k++) {
-            side_index[k] = (2*i + k) % vn;
+            side_index[k] = (3*(i + k/2) + k%2) % vn;
         }
 
         glDrawElements(GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_INT, &side_index);
     }
 
-    // Верхнее основание
+    for (int i = 0; i < n; i++) {
+        for (int k = 0; k < 4; k++) {
+            side_index[k] = (3*(i + k/2) + k%2 + 1) % vn;
+        }
+
+        glDrawElements(GL_TRIANGLE_STRIP, 4, GL_UNSIGNED_INT, &side_index);
+    }
+
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     GLuint base_index[n];
     for (int k = 0; k < n; k++) {
-        base_index[k] = 2*k;
+        base_index[k] = 3*k;
     }
     glDrawElements(GL_POLYGON, n, GL_UNSIGNED_INT, &base_index);
 
-    // Нижнее основание
+    // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     for (int k = 0; k < n; k++) {
-        base_index[k] = 2*k + 1;
+        base_index[k] = 3*k + 2;
     }
     glDrawElements(GL_POLYGON, n, GL_UNSIGNED_INT, &base_index);
 
@@ -247,19 +307,19 @@ int WINAPI WinMain(HINSTANCE hInstance,
     EnableOpenGL(hwnd, &hDC, &hRC);
 
     glFrustum(-1,1, -1,1, 2,80);
-    glEnable(GL_DEPTH_TEST); /*тест глубины*/
+    glEnable(GL_DEPTH_TEST); /*пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
 
-    glMatrixMode(GL_PROJECTION);/*матрица проекций*/
+    glMatrixMode(GL_PROJECTION);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
     glLoadIdentity();
     glFrustum(-0.1, 0.1, -0.1, 0.1, 0.2, 1000);
-    glMatrixMode(GL_MODELVIEW);/*матрица моделей*/
+    glMatrixMode(GL_MODELVIEW);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
     glLoadIdentity();
 
-    glEnable(GL_LIGHTING);/*разрешение работы с светом*/
-    glEnable(GL_LIGHT0);/*включение нулевого источника света*/
-    glEnable(GL_COLOR_MATERIAL); /*включает освещение*/
-    glEnable(GL_NORMALIZE);/*включает нормализацию вектора*/
+    glEnable(GL_LIGHTING);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ*/
+    glEnable(GL_LIGHT0);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ*/
+    glEnable(GL_COLOR_MATERIAL); /*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
+    glEnable(GL_NORMALIZE);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
     Init();
 
@@ -285,7 +345,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
             /* OpenGL animation code goes here */
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);/*тест глубины*/
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);/*пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
 
             glPushMatrix();
                 MoveCamera();
@@ -294,12 +354,12 @@ int WINAPI WinMain(HINSTANCE hInstance,
                 glPushMatrix();
                     glRotatef(24,0,0,1);
                     glRotatef(theta,0,1,0);
-                    float position[] = {0,0,1,0};//вектор освещение сверху вниз
+                    float position[] = {0,0,1,0};//пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
                     glLightfv(GL_LIGHT0, GL_POSITION, position);
 
-                    glTranslatef(0,0,40);/*положение освещения для наглядности*/
-                    glScalef(1,1,1);/*размер освещения*/
-                    glColor3f(1,1,1);/*цвет освещения*/
+                    glTranslatef(0,0,40);/*пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
+                    glScalef(1,1,1);/*пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
+                    glColor3f(1,1,1);/*пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ*/
                     DrawQuad();
                 glPopMatrix();
 
