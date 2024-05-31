@@ -8,7 +8,7 @@ float zAlfa = 0;
 POINTFLOAT pos = {0, 0};
 float pyramid[] = {4,4,2, 5,5,0, 5,3,0, 3,3,0, 3,5,0, 5,5,0};
 
-int n = 10;
+int n = 6;
 
 void ShowWord()
 {
